@@ -1,0 +1,112 @@
+#root {
+    background-color: whitesmoke;
+}
+
+.container.project-active::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgb(0, 0, 0);
+    z-index: 10;
+    opacity: 0.5;
+}
+
+@media (min-width:30em) {
+    #root {
+        background-image: url(./assets/image-hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 100dvh;
+    }
+
+    main {
+        width: 730px;
+        margin: 10em auto -2em;
+        position: relative;
+    }
+
+    main .back-project-section {
+        display: none;
+        z-index: 20;
+    }
+
+    main .back-project-section.project-active {
+        position: absolute;
+        width: 730px;
+        top: -10%;
+        display: block;
+        z-index: 20;
+    }
+
+    main .back-project-section.completion-active::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 30;
+        background: fixed rgba(0, 0, 0, 0.5);
+    }
+
+    main .completion-section {
+        display: none;
+    }
+
+    main .completion-section.completion-active {
+        width: 37%;
+        position: fixed;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        z-index: 30;
+    }
+}
+
+@media (max-width:30em) {
+    #root {
+        background-image: url(./assets/image-hero-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 100dvh;
+    }
+
+    main {
+        width: 90%;
+        margin: 10em auto 0em;
+        position: relative;
+    }
+
+    main .back-project-section {
+        display: none;
+    }
+
+    main .back-project-section.project-active {
+        position: absolute;
+        width: 100%;
+        top: -5em;
+        z-index: 20;
+        display: block;
+    }
+
+    main .back-project-section.completion-active::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 30;
+        background: fixed rgba(0, 0, 0, 0.5);
+    }
+
+
+    main .completion-section {
+        display: none;
+    }
+
+    main .completion-section.completion-active {
+        position: fixed;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        z-index: 30;
+    }
+}

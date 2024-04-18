@@ -1,0 +1,127 @@
+.product-item {
+    border: 1px solid rgba(219, 219, 219, 1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.product-item.out-of-stock::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.6);
+    inset: 0;
+    position: absolute;
+    border-radius: 0.5em;
+}
+
+.product {
+    display: flex;
+
+}
+
+.product :first-child {
+    font-weight: 750;
+    font-size: 1.1em;
+}
+
+.product :last-child {
+    color: rgba(60, 180, 171, 1);
+    font-weight: 600;
+}
+
+.product-description {
+    color: black;
+    font-size: 0.90em;
+    color: rgba(151, 151, 151, 1);
+}
+
+.reward {
+    display: flex;
+}
+
+.reward .left {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.reward .left :first-child {
+    font-size: 2em;
+    font-weight: 750;
+}
+
+.reward .left :last-child {
+    font-size: 0.95em;
+    color: rgb(146, 146, 146);
+}
+
+.reward-button {
+    padding: 1em 2em;
+    border-radius: 100vmax;
+    border: none;
+    background-color: rgba(60, 180, 171, 1);
+    color: white;
+}
+
+.reward-button:hover {
+
+    background-color: rgba(19, 123, 116, 1);
+}
+
+.reward-button.out-of-stock {
+    padding: 1em 2.2em;
+    border-radius: 100vmax;
+    border: none;
+    background-color: grey;
+    color: white;
+}
+
+@media (min-width:30em) {
+
+    .product-item {
+        gap: 1.5em;
+        padding: 2em 1.5em;
+    }
+
+    .product {
+        justify-content: space-between;
+    }
+
+    .product-description {
+        line-height: 2;
+    }
+
+    .reward {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .reward-button:hover {
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width:30em) {
+
+    .product-item {
+        gap: 1em;
+        padding: 1.5em 1.5em;
+    }
+
+    .product {
+        flex-direction: column;
+        gap: 0.25em;
+    }
+
+    .product-description {
+        line-height: 1.75;
+    }
+
+    .reward {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+    }
+}

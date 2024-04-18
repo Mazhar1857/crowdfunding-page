@@ -1,0 +1,42 @@
+.about {
+    margin: 1em 0;
+    background-color: white;
+    border-radius: 0.5em;
+
+}
+
+.about>*:not(:last-child, :first-child) {
+    margin-bottom: 2em;
+}
+
+.about h1 {
+    margin-bottom: 1em;
+}
+
+.about>p {
+    line-height: 1.5;
+    font-size: 0.9em;
+    color: rgba(151, 151, 151, 1);
+
+}
+
+@media (min-width:30em) {
+    .about {
+        padding: 2em 2.5em;
+    }
+
+    .about>p {
+        line-height: 1.5;
+
+    }
+}
+
+@media (max-width:30em) {
+    .about {
+        padding: 2em 1.5em;
+    }
+
+    .about>p {
+        line-height: 1.75;
+    }
+}

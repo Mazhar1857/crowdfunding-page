@@ -1,0 +1,57 @@
+.completion {
+    background: rgb(255, 255, 255);
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.checked-icon {
+    margin-bottom: 0.5em;
+}
+
+.thanking {
+    font-size: 1.37em;
+    font-weight: 750;
+}
+
+.thanking-phrase {
+    line-height: 1.75;
+    font-size: 0.9em;
+    color: rgba(151, 151, 151, 1);
+    text-align: justify;
+}
+
+.completion>button {
+    padding: 0.9em 2.2em;
+    border-radius: 100vmax;
+    border: 1px solid rgba(60, 179, 171, 1);
+    background-color: rgba(60, 179, 171, 1);
+    font-weight: 650;
+    color: white;
+}
+
+.completion>button:hover {
+    cursor: pointer;
+    background-color: rgba(22, 121, 116, 1);
+    color: white;
+}
+
+@media (min-width:30em) {
+
+    .completion {
+        padding: 2.5em 2.5em;
+        gap: 1.5em;
+    }
+
+}
+
+@media (max-width:30em) {
+
+    .completion {
+        padding: 1.75em 1.75em;
+        gap: 1.5em;
+    }
+
+}

@@ -1,0 +1,140 @@
+.mastercraft {
+    text-align: center;
+    background-color: white;
+    position: relative;
+    border-radius: 0.5em;
+}
+
+.mastercraft-logo :first-child {
+    position: absolute;
+    top: -1.8em;
+    left: calc(50% - 28px);
+}
+
+.mastercraft-heading h1 {
+    padding: 2em 0 0.5em;
+}
+
+.mastercraft-heading p {
+    font-size: 0.90em;
+    color: rgba(151, 151, 151, 1);
+}
+
+.project-bookmark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.mastercraft-project-button {
+    border-radius: 100vmax;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: rgba(60, 180, 171, 1);
+    color: white;
+}
+
+.mastercraft-bookmarked-button {
+    border-radius: 100vmax;
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.mastercraft-project-button:hover{
+    background-color: rgba(19, 123, 116, 1);
+}
+
+.mastercraft-bookmarked-button.bookmarked {
+    color: rgba(21, 122, 116, 1);
+}
+
+.mastercraft-bookmarked-button.bookmark {
+    color: rgba(112, 112, 112, 1);
+}
+
+.mastercraft-bookmarked-button.bookmarked .icon-bookmark {
+    circle {
+        fill: rgba(21, 122, 116, 1);
+    }
+
+    path {
+        fill: white;
+    }
+}
+
+.mastercraft-bookmarked-button.bookmark .icon-bookmark {
+    circle {
+        fill: rgba(112, 112, 112, 1);
+    }
+
+    path {
+        fill: rgba(177, 177, 177, 1);
+    }
+}
+
+@media (min-width:30em) {
+    .mastercraft-heading h1 {
+        font-size: 1.75em;
+    }
+
+    .mastercraft-heading p {
+        font-size: 1em;
+    }
+
+    .project-bookmark {
+        padding: 2em 2.5em;
+    }
+
+    .project-bookmark *:hover {
+        cursor: pointer;
+    }
+
+    .mastercraft-bookmarked-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        padding: 0 2.5em 0 0;
+    }
+
+    .mastercraft-project-button {
+        padding: 1.2em 2.5em;
+    }
+}
+
+@media (max-width:30em) {
+
+    .mastercraft {
+        padding: 0 1.5em;
+    }
+
+    .mastercraft-heading h1 {
+        font-size: 1.5em;
+    }
+
+    .mastercraft-heading p {
+        font-size: 0.85em;
+    }
+
+    .project-bookmark {
+        padding: 2em 0;
+    }
+
+    .mastercraft-bookmarked-button {
+        padding: 0;
+        background: transparent;
+    }
+
+    .mastercraft-bookmarked-button>span {
+        display: none;
+    }
+
+    .mastercraft-project-button {
+        padding: 1.15em 2em;
+    }
+
+}
